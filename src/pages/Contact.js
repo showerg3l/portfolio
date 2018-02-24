@@ -5,11 +5,7 @@ import Nav from '../components/nav';
 
 const Contact = () => {
     return (
-        <div>
-            <div className="left">
-                <Header />
-                <Nav />
-            </div>
+        <div className="content">
             Contact page
         </div>
     );

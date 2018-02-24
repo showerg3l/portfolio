@@ -5,16 +5,10 @@ import Nav from '../components/nav';
 
 const About = () => {
     return (
-        <div className="wrapper">
-            <div className="content-left">
-                <Header />
-                <Nav />
-            </div>
-            <div className="content-right">
-                <div className="placeholderimg"></div>
-                <div className="content">
-                    About page
-                </div>
+        <div className="content">
+            <div className="placeholderimg"></div>
+            <div className="content">
+                About page
             </div>
         </div>
     );

@@ -4,7 +4,7 @@ import Header from '../components/header';
 import Nav from '../components/nav';
 import Slider from '../components/slider/slider';
 
-const Home = () => {
+const Home = ({location}) => {
     const sliderdata = {
         totalSlides: 3,
         slides: [
@@ -23,16 +23,8 @@ const Home = () => {
         ]
     }
     return (
-        <div className="wrapper">
-            <div className="content-left">
-                <Header />
-                <Nav />
-            </div>
-            <div className="content-right">
-                <div className="content">
-                    <Slider data={sliderdata}></Slider>
-                </div>
-            </div>
+        <div className="content">
+            <Slider data={sliderdata}></Slider>            
         </div>
     )
 }

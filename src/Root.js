@@ -7,16 +7,28 @@ import About from './pages/About';
 import Skills from './pages/Skills';
 import Work from './pages/Work';
 import Contact from './pages/Contact';
+import Project from './pages/Project';
+
+import Header from './components/header';
+import Nav from './components/nav';
+
 
 const Root = ({ store }) => (
     <Provider store={store}>  
         <Router>
-            <div>
-                <Route exact path="/" component={Home} />
-                <Route path="/about" component={About} />
-                <Route path="/skills" component={Skills} />
-                <Route path="/work" component={Work} />
-                <Route path="/contact" component={Contact} />
+            <div className="wrapper">
+                <div className="content-left">
+                    <Header />
+                    <Nav />
+                </div>
+                <div className="content-right">
+                    <Route exact path="/" render={Home} />
+                    <Route exact path="/about" component={About} />
+                    <Route exact path="/skills" component={Skills} />
+                    <Route exact path="/work" component={Work} />
+                    <Route exact path="/contact" component={Contact} />
+                    <Route exact path="/work/:id" component={Project} />
+                </div>
             </div>
         </Router>
     </Provider>
