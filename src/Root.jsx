@@ -8,7 +8,7 @@ import Sidebar from './components/sidebar';
 
 
 const Root = ({ store }) => (
-    <Provider store={store}>  
+    <Provider store={store}>
         <Router>
             <div className="wrapper">
                 <div className="content-left">

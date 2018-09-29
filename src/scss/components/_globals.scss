@@ -1,3 +1,10 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+}
 body {
     margin: 0;
     padding: 0;
@@ -7,6 +14,49 @@ body {
     @extend p;
 }
 
-.wrapper {
+* {
+    box-sizing: border-box;
+}
 
+#root {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.content-left {
+    flex: 0 0 100%;
+    @media screen and (min-width: 768px) {
+        max-width: 400px;
+    }
+}
+
+.content-right {
+    flex: 0 1 100%;
+    padding: 40px;
+    background-color: #efefef;
+    @media screen and (min-width: 768px) {
+        max-width: calc(100% - 400px);
+    }
+    @media screen and (min-width: 992px) {
+        padding: 80px;
+    }
+    @media screen and (min-width: 1200px) {
+        padding: 135px;
+    }
+}
+
+
+.page-content {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
 }

@@ -10,28 +10,7 @@ a {
 
 
 
-.wrapper {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
 
-.content-left {
-    flex: 0 1 100%;
-    max-width: 300px; 
-    padding: 50px;
-    background-color: #fff;
-}
-
-.content-right {
-    flex: 0 1 100%;
-    max-width: calc(100% - 400px);
-    padding: 50px;
-    background-color: #efefef;
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .header {
     align-self: flex-start;
@@ -82,35 +61,6 @@ a {
     flex-basis: 100%;
 }
 
-#slider {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.slide {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-}
-
-.arrow {
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    position: relative;
-    margin-right: 20px;
-    float: left;
-}
-
-.placeholderimg {
-    width: 100%;
-    height: 300px;
-    background-color: #ddd;
-}
 
 .preview-container {
     position: absolute;

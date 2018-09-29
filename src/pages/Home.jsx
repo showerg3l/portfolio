@@ -4,13 +4,15 @@ import Header from '../components/header';
 import Nav from '../components/sidebar';
 import Slider from '../components/slider/slider';
 
+import img1 from '../images/rawpixel-603646-unsplash.jpg';
+
 const Home = ({location}) => {
     const sliderdata = {
         totalSlides: 4,
         slides: [
             {
                 title: 'Moodle Theme',
-                imgurl: 'img1.jpg'
+                imgurl: img1
             },
             {
                 title: 'Moodle Page Builder',
@@ -27,7 +29,7 @@ const Home = ({location}) => {
         ]
     }
     return (
-        <div className="content">
+        <div id="home" className="page-content">
             <Slider data={sliderdata}></Slider>
         </div>
     )

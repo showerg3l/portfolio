@@ -58,26 +58,6 @@ a {
 .list-unstyled {
   list-style: none; }
 
-.wrapper {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  position: absolute; }
-
-.content-left {
-  flex: 0 1 100%;
-  max-width: 300px;
-  padding: 50px;
-  background-color: #fff; }
-
-.content-right {
-  flex: 0 1 100%;
-  max-width: calc(100% - 400px);
-  padding: 50px;
-  background-color: #efefef;
-  display: flex;
-  flex-wrap: wrap; }
-
 .header {
   align-self: flex-start;
   flex: 0 1 auto; }
@@ -115,32 +95,6 @@ a {
 .content {
   background-color: #fff;
   flex-basis: 100%; }
-
-#slider {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  overflow: hidden;
-  white-space: nowrap; }
-
-.slide {
-  display: inline-block;
-  width: 100%;
-  height: 100%; }
-
-.arrow {
-  width: 20px;
-  height: 20px;
-  background-color: red;
-  position: relative;
-  margin-right: 20px;
-  float: left; }
-
-.placeholderimg {
-  width: 100%;
-  height: 300px;
-  background-color: #ddd; }
 
 .preview-container {
   position: absolute;
@@ -195,6 +149,21 @@ a {
 .text-red-20 {
   color: rgba(93, 14, 14, 0.2) !important; }
 
+.btn {
+  padding: 10px 21px;
+  color: #333333;
+  border: 0;
+  background-color: transparent;
+  border-radius: 2px; }
+
+.btn-red {
+  background-color: #5d0e0e;
+  color: #fff; }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+
 body {
   margin: 0;
   padding: 0;
@@ -202,13 +171,68 @@ body {
   color: #333333;
   background-color: #efefef; }
 
-.sidebar {
-  flex: 0 0 100%;
-  max-width: 300px;
+* {
+  box-sizing: border-box; }
+
+#root {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+.wrapper {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  width: 100%;
   height: 100%; }
+
+.content-left {
+  flex: 0 0 100%; }
+
+@media screen and (min-width: 768px) {
+  .content-left {
+    max-width: 400px; } }
+
+.content-right {
+  flex: 0 1 100%;
+  padding: 40px;
+  background-color: #efefef; }
+
+@media screen and (min-width: 768px) {
+  .content-right {
+    max-width: calc(100% - 400px); } }
+
+@media screen and (min-width: 992px) {
+  .content-right {
+    padding: 80px; } }
+
+@media screen and (min-width: 1200px) {
+  .content-right {
+    padding: 135px; } }
+
+.page-content {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden; }
+
+.sidebar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 50px;
+  background-color: #fff; }
+
+@media screen and (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 400px;
+    overflow-y: auto; } }
 
 .sidebar .name {
   flex: 0 0 auto;
@@ -254,14 +278,71 @@ body {
   top: 50%;
   left: 0;
   right: 100%;
-  height: 1px;
+  height: 2px;
   background-color: #333333;
   opacity: 1;
-  transform: rotate(-2deg);
+  transform: rotate(-1deg);
   transition: right 0.2s ease; }
 
 .sidebar .nav a:hover:after, .sidebar .nav a:active:after {
   right: 0; }
+
+#slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap; }
+
+#slider .slides-container {
+  height: 100%; }
+
+.slide {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.slide .image {
+  height: 100%;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.slide .moreinfo {
+  position: absolute;
+  bottom: 10px;
+  left: 10px; }
+
+.slide .moreinfo .info {
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  opacity: 0;
+  visibility: hidden;
+  padding: 20px;
+  border-radius: 2px;
+  background-color: #5d0e0e;
+  color: white; }
+
+.slide .moreinfo.show .info {
+  opacity: 1;
+  visibility: visible; }
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  position: relative;
+  margin-right: 20px;
+  float: left; }
+
+.placeholderimg {
+  width: 100%;
+  height: 200px;
+  background-color: #ddd; }
 
 .divider.dir-col {
   width: 10px;
@@ -278,3 +359,13 @@ body {
 .divider .dashed {
   width: 1px;
   border-left: dashed 1px #000; }
+
+#home figure {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+  margin: 0;
+  background-image: url("images/rawpixel-603646-unsplash.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
