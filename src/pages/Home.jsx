@@ -8,29 +8,19 @@ import img1 from '../images/rawpixel-603646-unsplash.jpg';
 
 const Home = ({location}) => {
     const sliderdata = {
-        totalSlides: 4,
+        totalSlides: 1,
         slides: [
             {
                 title: 'Moodle Theme',
                 imgurl: img1
-            },
-            {
-                title: 'Moodle Page Builder',
-                imgurl: 'img2.jpg'
-            },
-            {
-                title: 'GraphQL API',
-                imgurl: 'img3.jpg'
-            },
-            {
-                title: 'Electron App',
-                imgurl: 'img4.jpg'
             }
         ]
     }
     return (
         <div id="home" className="page-content">
-            <Slider data={sliderdata}></Slider>
+            <div className="content">
+                <Slider data={sliderdata}></Slider>
+            </div>
         </div>
     )
 }
