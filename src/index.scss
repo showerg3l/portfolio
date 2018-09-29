@@ -1,0 +1,17 @@
+@import url("https://use.typekit.net/zqs0gyz.css");
+
+@import 'scss/vars';
+@import 'scss/components/utility';
+@import 'scss/components/type';
+
+@import 'scss/main';
+
+
+//components
+@import 'scss/components/colours';
+@import 'scss/components/globals';
+@import 'scss/components/sidebar';
+@import 'scss/components/divider';
+
+//pages
+@import 'scss/pages/home';

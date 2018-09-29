@@ -1,0 +1,59 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: $base-font;
+    font-weight: 700;
+    margin: 0;
+}
+
+h1 {
+    font-size: 66px;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 26px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5, h6 {
+    font-size: 18px
+}
+
+p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+a {
+    color: $gray-dark;
+    transition: color 0.2s ease;
+    &:hover, &:active {
+        color: $red;
+    }
+}
+
+.text-bold {
+    font-weight: 700 !important;
+}
+
+.text-normal {
+    font-weight: 400 !important;
+}
+
+.text-light {
+    font-weight: 300 !important;
+}
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+}

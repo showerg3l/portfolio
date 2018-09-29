@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 
 import Header from '../components/header';
-import Nav from '../components/nav';
-
-import Container from '../components/dnd/container';
+import Nav from '../components/sidebar';
 
 
 class Work extends Component {
