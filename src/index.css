@@ -236,7 +236,7 @@ body {
 
 .sidebar .name {
   flex: 0 0 auto;
-  padding-bottom: 25px; }
+  padding-bottom: 10px; }
 
 .sidebar .name h1 {
   line-height: 50px; }
@@ -244,7 +244,7 @@ body {
 .sidebar .job-title {
   flex: 0 0 auto;
   line-height: 1;
-  padding-bottom: 25px; }
+  padding-bottom: 40px; }
 
 .sidebar .socials {
   flex: 0 0 auto;

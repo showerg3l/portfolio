@@ -19,10 +19,9 @@ const Sidebar = () => {
                 </Link>
             </div>
             <div className="job-title">
-                <h3 className="text-light">
-                    Front-end <br />
-                    Developer
-                </h3>
+                <h4 className="text-light">
+                    Front-end Developer
+                </h4>
             </div>
             <div className="socials">
                 <Link to="https://twitter.com/showerg3l" className="twitter"><FontAwesomeIcon icon={['fab',"twitter"]} /></Link>
