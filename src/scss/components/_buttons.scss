@@ -1,12 +1,19 @@
 .btn {
+    margin: 5px;
     padding: 10px 21px;
     color: $gray-dark;
     border: 0;
     background-color: transparent;
     border-radius: 2px;
+    transition: background-color 0.2s ease;
 }
 
 .btn-red {
     background-color: $red;
-    color: #fff;
+    color: $white;
+    &:active,
+    &:hover {
+        color: $white;
+        background-color: darken($red, 10);
+    }
 }

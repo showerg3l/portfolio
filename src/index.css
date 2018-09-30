@@ -112,7 +112,7 @@ a {
   text-decoration: none; }
 
 .content {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
   flex-basis: 100%; }
 
 .preview-container {
@@ -169,15 +169,21 @@ a {
   color: rgba(93, 14, 14, 0.2) !important; }
 
 .btn {
+  margin: 5px;
   padding: 10px 21px;
   color: #333333;
   border: 0;
   background-color: transparent;
-  border-radius: 2px; }
+  border-radius: 2px;
+  transition: background-color 0.2s ease; }
 
 .btn-red {
   background-color: #5d0e0e;
-  color: #fff; }
+  color: white; }
+
+.btn-red:active, .btn-red:hover {
+  color: white;
+  background-color: #310707; }
 
 html, body {
   margin: 0;
@@ -298,7 +304,7 @@ body {
   transform: rotate(-1deg);
   transition: right 0.2s ease; }
 
-.sidebar .nav a:hover:after, .sidebar .nav a:active:after {
+.sidebar .nav a.active:after, .sidebar .nav a:hover:after, .sidebar .nav a:active:after {
   right: 0; }
 
 #slider {
@@ -327,12 +333,12 @@ body {
 
 .slide .moreinfo {
   position: absolute;
-  bottom: 10px;
-  left: 10px; }
+  bottom: 0;
+  left: 0; }
 
 .slide .moreinfo .info {
   position: absolute;
-  left: 0;
+  left: 5px;
   bottom: 100%;
   opacity: 0;
   visibility: hidden;
@@ -363,8 +369,25 @@ body {
   padding-bottom: 30px; }
 
 .project .project-wrapper {
-  padding: 15px;
-  background-color: #fff; }
+  background-color: #fff;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative; }
+
+.project .project-wrapper figure {
+  margin: 0; }
+
+.project .project-wrapper .project-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block; }
+
+.project .project-wrapper .project-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex; }
 
 .divider.dir-col {
   width: 10px;
@@ -427,3 +450,37 @@ body {
   background-color: transparent;
   display: flex;
   flex-wrap: wrap; }
+
+#projects .tags .tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px; }
+
+#projects .projects {
+  flex: 0 0 100%; }
+
+#project {
+  flex: 0 0 100%;
+  position: relative; }
+
+#project .project-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 335px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#project .content {
+  padding: 50px; }
+
+#project .project-header {
+  padding-bottom: 75px; }
+
+#project .project-header .returnto svg {
+  margin-right: 15px; }
+
+#project .project-header .project-title {
+  padding: 25px 0; }

@@ -4,4 +4,47 @@
         display: flex;
         flex-wrap: wrap;
     }
+
+    .tags {
+        .tag-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -5px;
+        }
+    }
+
+    .projects {
+        flex: 0 0 100%;
+    }
+}
+
+#project {
+    flex: 0 0 100%;
+    position: relative;
+    .project-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 335px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .content {
+        padding: 50px;
+    }
+
+    .project-header {
+        padding-bottom: 75px;
+        .returnto {
+            svg {
+                margin-right: 15px;
+            }
+        }
+        .project-title {
+            padding: 25px 0;
+        }
+    }
 }

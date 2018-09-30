@@ -64,7 +64,9 @@
                 transform: rotate(-1deg);
                 transition: right 0.2s ease;
             }
-            &:hover, &:active {
+            &.active,
+            &:hover,
+            &:active {
                 &:after {
                     right: 0;
                 }

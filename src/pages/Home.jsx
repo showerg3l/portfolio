@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Header from '../components/header';
-import Nav from '../components/sidebar';
 import Slider from '../components/slider/slider';
 
 import img1 from '../images/rawpixel-603646-unsplash.jpg';

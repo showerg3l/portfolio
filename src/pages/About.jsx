@@ -1,8 +1,5 @@
 import React from 'react';
 
-import Header from '../components/header';
-import Nav from '../components/sidebar';
-
 import me from '../images/pablo-guerrero-568547-unsplash.jpg';
 
 const About = () => {
@@ -14,7 +11,7 @@ const About = () => {
             </div>
             <div className="page-content">
                 <div className="content">
-                    <h2 class="text-red">Who Am I</h2>
+                    <h2 className="text-red">Who Am I</h2>
                     <div className="attributes">
                         <p>
                             <span className="text-red">Age:</span><span className="text-bold">&nbsp;25</span>

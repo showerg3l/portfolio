@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Arrow from './arrows';
 import Slide from './slide';
@@ -88,7 +88,6 @@ class Slider extends React.Component {
     }
 
     render() {
-        const totalSlides = this.props.data.totalSlides;
         return (
             <div id="slider">
                 <div className="slides-container" style={{
