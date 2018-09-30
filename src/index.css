@@ -24,6 +24,14 @@
   padding-left: 30px;
   padding-right: 30px; }
 
+.fade-enter {
+  opacity: 0;
+  z-index: 1; }
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "proxima-nova", Arial, Helvetica, Sans-serif;
   font-weight: 700;
@@ -408,11 +416,14 @@ body {
 #home.page-content {
   height: 100%;
   position: absolute;
-  width: calc(100% - 400px); }
+  width: calc(100% - 400px);
+  background-color: #efefef; }
 
 #home .content {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden; }
 
 #home figure {
   position: relative;

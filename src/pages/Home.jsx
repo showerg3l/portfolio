@@ -10,7 +10,7 @@ const Home = ({location}) => {
         slides: [
             {
                 title: 'Moodle Theme',
-                imgurl: img1
+                //imgurl: img1
             }
         ]
     }

@@ -5,10 +5,10 @@ import me from '../images/pablo-guerrero-568547-unsplash.jpg';
 const About = () => {
     return (
         <div id="about">
-            <div className="about-hero-image" style={{
+            {/*<div className="about-hero-image" style={{
                 "backgroundImage" : "url("+me+")"
             }}>
-            </div>
+        </div>*/}
             <div className="page-content">
                 <div className="content">
                     <h2 className="text-red">Who Am I</h2>
