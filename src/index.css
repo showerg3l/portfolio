@@ -59,9 +59,8 @@ p, body {
 a {
   color: #333333;
   transition: color 0.2s ease; }
-
-a:hover, a:active {
-  color: #5d0e0e; }
+  a:hover, a:active {
+    color: #5d0e0e; }
 
 .text-bold {
   font-weight: 700 !important; }
@@ -188,10 +187,9 @@ a {
 .btn-red {
   background-color: #5d0e0e;
   color: white; }
-
-.btn-red:active, .btn-red:hover {
-  color: white;
-  background-color: #310707; }
+  .btn-red:active, .btn-red:hover {
+    color: white;
+    background-color: #310707; }
 
 html, body {
   margin: 0;
@@ -215,19 +213,17 @@ body {
 
 .content-left {
   flex: 0 0 100%; }
-
-@media screen and (min-width: 768px) {
-  .content-left {
-    max-width: 400px; } }
+  @media screen and (min-width: 768px) {
+    .content-left {
+      max-width: 400px; } }
 
 .content-right {
   flex: 0 1 100%;
   background-color: #efefef;
   display: flex; }
-
-@media screen and (min-width: 768px) {
-  .content-right {
-    max-width: calc(100% - 400px); } }
+  @media screen and (min-width: 768px) {
+    .content-right {
+      max-width: calc(100% - 400px); } }
 
 .page-content {
   position: relative;
@@ -235,14 +231,12 @@ body {
   min-height: 100%;
   border-radius: 4px;
   padding: 40px; }
-
-@media screen and (min-width: 992px) {
-  .page-content {
-    padding: 80px; } }
-
-@media screen and (min-width: 1200px) {
-  .page-content {
-    padding: 135px; } }
+  @media screen and (min-width: 992px) {
+    .page-content {
+      padding: 80px; } }
+  @media screen and (min-width: 1200px) {
+    .page-content {
+      padding: 135px; } }
 
 .sidebar {
   position: relative;
@@ -252,68 +246,55 @@ body {
   min-height: 100%;
   padding: 50px;
   background-color: #fff; }
-
-@media screen and (min-width: 768px) {
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 400px;
-    overflow-y: auto; } }
-
-.sidebar .name {
-  flex: 0 0 auto;
-  padding-bottom: 10px; }
-
-.sidebar .name h1 {
-  line-height: 50px; }
-
-.sidebar .job-title {
-  flex: 0 0 auto;
-  line-height: 1;
-  padding-bottom: 40px; }
-
-.sidebar .socials {
-  flex: 0 0 auto;
-  padding-bottom: 25px;
-  font-size: 26px; }
-
-.sidebar .socials a {
-  padding: 15px 7px; }
-
-.sidebar .socials a:first-child {
-  padding-left: 0; }
-
-.sidebar .contact-info {
-  flex: 0 0 auto;
-  margin-bottom: auto;
-  padding-bottom: 15px; }
-
-.sidebar .contact-info > div {
-  padding-bottom: 15px; }
-
-.sidebar .nav {
-  flex: 0 0 auto;
-  font-size: 26px; }
-
-.sidebar .nav a {
-  position: relative; }
-
-.sidebar .nav a:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 100%;
-  height: 2px;
-  background-color: #333333;
-  opacity: 1;
-  transform: rotate(-1deg);
-  transition: right 0.2s ease; }
-
-.sidebar .nav a.active:after, .sidebar .nav a:hover:after, .sidebar .nav a:active:after {
-  right: 0; }
+  @media screen and (min-width: 768px) {
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 400px;
+      overflow-y: auto; } }
+  .sidebar .name {
+    flex: 0 0 auto;
+    padding-bottom: 10px; }
+    .sidebar .name h1 {
+      line-height: 50px; }
+  .sidebar .job-title {
+    flex: 0 0 auto;
+    line-height: 1;
+    padding-bottom: 40px; }
+  .sidebar .socials {
+    flex: 0 0 auto;
+    padding-bottom: 25px;
+    font-size: 26px; }
+    .sidebar .socials a {
+      padding: 15px 7px; }
+      .sidebar .socials a:first-child {
+        padding-left: 0; }
+  .sidebar .contact-info {
+    flex: 0 0 auto;
+    margin-bottom: auto;
+    padding-bottom: 15px; }
+    .sidebar .contact-info > div {
+      padding-bottom: 15px; }
+  .sidebar .nav {
+    flex: 0 0 auto;
+    font-size: 26px; }
+    .sidebar .nav a {
+      position: relative; }
+      .sidebar .nav a:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 100%;
+        height: 2px;
+        background-color: #333333;
+        opacity: 1;
+        transform: rotate(-1deg);
+        transition: right 0.2s ease; }
+      .sidebar .nav a.active:after, .sidebar .nav a:hover:after, .sidebar .nav a:active:after {
+        right: 0; }
 
 #slider {
   position: relative;
@@ -322,42 +303,37 @@ body {
   margin: 0 auto;
   overflow: hidden;
   white-space: nowrap; }
-
-#slider .slides-container {
-  height: 100%; }
+  #slider .slides-container {
+    height: 100%; }
 
 .slide {
   display: inline-block;
   width: 100%;
   height: 100%;
   position: relative; }
-
-.slide .image {
-  height: 100%;
-  width: 100%;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.slide .moreinfo {
-  position: absolute;
-  bottom: 0;
-  left: 0; }
-
-.slide .moreinfo .info {
-  position: absolute;
-  left: 5px;
-  bottom: 100%;
-  opacity: 0;
-  visibility: hidden;
-  padding: 20px;
-  border-radius: 2px;
-  background-color: #5d0e0e;
-  color: white; }
-
-.slide .moreinfo.show .info {
-  opacity: 1;
-  visibility: visible; }
+  .slide .image {
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .slide .moreinfo {
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+    .slide .moreinfo .info {
+      position: absolute;
+      left: 5px;
+      bottom: 100%;
+      opacity: 0;
+      visibility: hidden;
+      padding: 20px;
+      border-radius: 2px;
+      background-color: #5d0e0e;
+      color: white; }
+    .slide .moreinfo.show .info {
+      opacity: 1;
+      visibility: visible; }
 
 .arrow {
   width: 20px;
@@ -375,27 +351,23 @@ body {
 .project {
   padding-top: 30px;
   padding-bottom: 30px; }
-
-.project .project-wrapper {
-  background-color: #fff;
-  border-radius: 2px;
-  overflow: hidden;
-  position: relative; }
-
-.project .project-wrapper figure {
-  margin: 0; }
-
-.project .project-wrapper .project-image {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block; }
-
-.project .project-wrapper .project-button {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: flex; }
+  .project .project-wrapper {
+    background-color: #fff;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative; }
+    .project .project-wrapper figure {
+      margin: 0; }
+    .project .project-wrapper .project-image {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block; }
+    .project .project-wrapper .project-button {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: flex; }
 
 .divider.dir-col {
   width: 10px;
@@ -439,23 +411,20 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end; }
-
-#about .about-hero-image {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: fixed;
-  height: 100%;
-  width: calc(50% - 200px);
-  left: 400px; }
-
-#about .page-content {
-  flex: 0 0 50%;
-  padding: 0;
-  padding-right: 50px; }
-
-#about .content {
-  padding: 135px 50px 50px; }
+  #about .about-hero-image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    height: 100%;
+    width: calc(50% - 200px);
+    left: 400px; }
+  #about .page-content {
+    flex: 0 0 50%;
+    padding: 0;
+    padding-right: 50px; }
+  #about .content {
+    padding: 135px 50px 50px; }
 
 #projects .content {
   background-color: transparent;
@@ -473,25 +442,22 @@ body {
 #project {
   flex: 0 0 100%;
   position: relative; }
+  #project .project-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 335px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  #project .content {
+    padding: 50px; }
+  #project .project-header {
+    padding-bottom: 75px; }
+    #project .project-header .returnto svg {
+      margin-right: 15px; }
+    #project .project-header .project-title {
+      padding: 25px 0; }
 
-#project .project-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 335px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-#project .content {
-  padding: 50px; }
-
-#project .project-header {
-  padding-bottom: 75px; }
-
-#project .project-header .returnto svg {
-  margin-right: 15px; }
-
-#project .project-header .project-title {
-  padding: 25px 0; }
+/*# sourceMappingURL=index.css.map */
