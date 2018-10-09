@@ -9,25 +9,23 @@ const Project = (props) => {
     let projects = [
         {
             slug: 'super-theme',
-            name: 'super theme',
+            name: 'Super theme',
+            summary: 'A Moodle theme to end all Moodle themes',
             image: imgSuper,
-            featured: true,
+            featured: false,
             tags: [
                 "PHP",
-                "SCSS",
                 "Moodle",
-                "JS",
                 "Design"
             ]
         },
         {
             slug: 'content-builder',
             name: 'Content Builder',
+            summary: 'A well known solution, integrated into a new platform',
             image: imgSuper,
-            featured: true,
+            featured: false,
             tags: [
-                "PHP",
-                "SCSS",
                 "React",
                 "Moodle",
                 "Design"
@@ -54,26 +52,24 @@ const Project = (props) => {
                         <Link className="btn btn-red" to="/projects">All</Link>
                         {tags.map((tag,i) => {
                             if (props.match.params.tag === tag) {
-                                return <Link key={i} className="btn btn-red" to={props.match.url}>{tag}</Link>
+                                return <Link key={i} className="btn btn-red selected" to={props.match.url}>{tag}</Link>
                             } else {
-                                return <Link key={i} className="btn btn-red" to={"/projects/" + tag}>{tag}</Link>
+                                return <Link key={i} className="btn btn-white" to={"/projects/" + tag}>{tag}</Link>
                             }
                         })}
                     </div>
                 </div>
                 <div className="projects">
-                    <div className="row">
-                        {
-                            projects.map((project, i) => {
-                                if (props.match.params.tag && project.tags.includes(props.match.params.tag)) {
-                                    return <ProjectCard key={i} data={project} />
-                                } else if (!props.match.params.tag) {
-                                    return <ProjectCard key={i} data={project} />
-                                }
-                                return "";
-                            })
-                        }
-                    </div>
+                    {
+                        projects.map((project, i) => {
+                            if (props.match.params.tag && project.tags.includes(props.match.params.tag)) {
+                                return <ProjectCard key={i} data={project} />
+                            } else if (!props.match.params.tag) {
+                                return <ProjectCard key={i} data={project} />
+                            }
+                            return "";
+                        })
+                    }
                 </div>
             </div>
         </div>

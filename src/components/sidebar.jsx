@@ -37,7 +37,7 @@ const Sidebar = (props) => {
             </div>
             <div className="job-title">
                 <h4 className="text-light">
-                    Front-end Developer
+                    Web Developer
                 </h4>
             </div>
             <div className="socials">

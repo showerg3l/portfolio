@@ -9,6 +9,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Super from './pages/projects/super-theme';
 import CB from './pages/projects/content-builder';
+import Contact from './pages/Contact';
 
 import Sidebar from './components/sidebar';
 
@@ -32,6 +33,7 @@ const Root = ({ store }) => (
                                         <Route exact path="/projects/:tag(PHP|SCSS|Moodle|JS|Design|React)" render={Projects} />
                                         <Route exact path="/projects/super-theme" render={Super} />
                                         <Route exact path="/projects/content-builder" render={CB} />
+                                        <Route exact path="/contact" render={Contact} />
                                     </Switch>
                                 </CSSTransition>
                             </TransitionGroup>

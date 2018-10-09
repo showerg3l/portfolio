@@ -3,7 +3,7 @@ import React from 'react';
 const Job = (props) => {
     console.log(props);
     return (
-        <div className="job">
+        <div className="job-list-item">
             <div className="company">
                 <h4>{props.data.company}</h4>
             </div>

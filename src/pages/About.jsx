@@ -8,6 +8,16 @@ const jobData = [
         company: "HowToMoodle",
         jobTitle: "Web Designer & Developer",
         duration: "May 2016 - Present"
+    },
+    {
+        company: "RTITB",
+        jobTitle: "Developer",
+        duration: "June 2015 - April 2016"
+    },
+    {
+        company: "Yarrington",
+        jobTitle: "Designer & Developer",
+        duration: "September 2010 - February 2015"
     }
 ];
 
@@ -15,14 +25,13 @@ const jobData = [
 const About = () => {
     return (
         <div id="about">
-            {/*<div className="about-hero-image" style={{
+            {<div className="about-hero-image" style={{
                 "backgroundImage" : "url("+me+")"
-            }}>
-        </div>*/}
+            }}></div>}
             <div className="page-content">
                 <div className="content">
                     <div className="about-me">
-                        <h2 className="text-red">Who Am I</h2>
+                        <h2>Who Am I</h2>
                         <div className="attributes">
                             <p>
                                 <span className="text-red">Age:</span><span className="text-bold">&nbsp;25</span>
@@ -70,7 +79,7 @@ const About = () => {
                         <h3>
                             Previous experience
                         </h3>
-                        <div className="jobs">
+                        <div className="job-list">
                             {jobData.map((job, i) => {
                                 return <JobList key={i} data={job}/>
                             })}

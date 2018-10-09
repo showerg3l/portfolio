@@ -11,9 +11,22 @@
 .btn-red {
     background-color: $red;
     color: $white;
+    &.selected,
     &:active,
     &:hover {
         color: $white;
         background-color: darken($red, 10);
+    }
+    
+}
+
+.btn-white {
+    background-color: $white;
+    color: $red;
+    &.selected,
+    &:active,
+    &:hover {
+        color: $white;
+        background-color: $red;
     }
 }

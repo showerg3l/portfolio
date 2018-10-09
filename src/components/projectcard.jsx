@@ -1,14 +1,24 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 const ProjectCard = (props) => {
-    let additionalClasses;
-    additionalClasses = props.data.featured ? 'col-12' : 'col-6';
+    let additionalClasses = props.data.featured ? 'featured' : '';
     return (
         <div className={"project " + additionalClasses}>
             <div className="project-wrapper">
                 <img src={props.data.image} alt="" className="project-image"/>
-                <div className="project-button">
-                    <Link className="btn btn-red" to={"projects/" + props.data.slug}>i</Link>
+                <div className="project-content">
+                    <div className="project-title">
+                        {props.data.name}
+                    </div>
+                    <div className="project-summary">
+                        {props.data.summary}
+                    </div>
+                    <Link className="project-link text-uppercase text-bold" to={"projects/" + props.data.slug}>
+                        View Project
+                        <FontAwesomeIcon icon="arrow-right" />
+                    </Link>
                 </div>
             </div>
         </div>

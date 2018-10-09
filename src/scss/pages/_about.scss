@@ -2,19 +2,30 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    position: relative;
     .about-hero-image {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        position: fixed;
-        height: 100%;
-        width: calc(50% - 200px);
-        left: 400px;
+        height: 200px;
+        width: 100%;
+        left:0;
+        position: relative;
+
+        @media screen and (min-width: 992px) {
+            width: calc(50% - 200px);
+            height: 100%;
+            left: 400px;
+            position: fixed;
+        }
     }
     .page-content {
-        flex: 0 0 50%;
+        flex: 0 0 100%;
         padding: 0;
         padding-right: 50px;
+        @media screen and (min-width: 992px) {
+            flex: 0 0 50%;
+        }
     }
     .content {
         padding: 135px 50px 50px;

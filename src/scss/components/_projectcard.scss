@@ -1,19 +1,53 @@
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
 .project {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    flex: 0 0 100%;
+    padding: 30px 0;
+
+    @media screen and (min-width: 1200px) {
+        flex: 0 0 50%;
+    }
+
+    &.featured {
+        flex: 0 0 100%;
+    }
+    
     .project-wrapper {
-        background-color: #fff;
-        border-radius: 2px;
-        overflow: hidden;
         position: relative;
+        padding: 0 15px;
         figure {
             margin: 0;
         }
         .project-image {
+            border-radius: 4px 4px 0 0;
             width: 100%;
             max-width: 100%;
             height: auto;
             display: block;
+        }
+        .project-content {
+            position: relative;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 0 0 4px 4px;
+            .project-title {
+                color: $red;
+                margin-bottom: 10px;
+                font-weight: 700;
+                font-size: 20px;
+            }
+            .project-summary {
+                margin-bottom: 20px;
+            }
+            .project-link {
+                svg {
+                    margin-left: 10px;
+                }
+            }
         }
         .project-button {
             position: absolute;
