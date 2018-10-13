@@ -2,15 +2,21 @@ import React from 'react';
 
 import Slider from '../components/slider/slider';
 
-import img1 from '../images/rawpixel-603646-unsplash.jpg';
-
 const Home = ({location}) => {
     const sliderdata = {
         totalSlides: 1,
         slides: [
             {
-                title: 'Moodle Theme',
-                //imgurl: img1
+                title: 'Super Theme',
+                angle: 0
+            },
+            {
+                title: 'Content Builder',
+                angle: 90,
+            },
+            {
+                title: 'Support Timer App',
+                angle: 45
             }
         ]
     }

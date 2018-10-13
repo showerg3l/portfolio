@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 
-import ContactForm from '../components/contactForm';
+//import ContactForm from '../components/contactForm';
 
 import me from '../images/pablo-guerrero-568547-unsplash.jpg';
 
