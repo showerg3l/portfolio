@@ -4,19 +4,22 @@ import Slider from '../components/slider/slider';
 
 const Home = ({location}) => {
     const sliderdata = {
-        totalSlides: 1,
+        totalSlides: 3,
         slides: [
             {
                 title: 'Super Theme',
-                angle: 0
+                summary: 'A Moodle theme to end all Moodle themes',
+                slug: 'super-theme'
             },
             {
                 title: 'Content Builder',
-                angle: 90,
+                summary: 'A well known solution, integrated into a new platform',
+                slug: 'content-builder'
             },
             {
                 title: 'Support Timer App',
-                angle: 45
+                summary: 'A Moodle theme to end all Moodle themes',
+                slug: 'support-timer-app'
             }
         ]
     }

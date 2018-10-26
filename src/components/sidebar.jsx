@@ -54,14 +54,14 @@ const Sidebar = (props) => {
                         callum-booth@live.co.uk
                     </span>
                 </div>
-                <div className="telephone">
+                {/*<div className="telephone">
                     <span className="text-red">
                         t: &nbsp;
                     </span> 
                     <span className="text-bold"> 
                         07843 225 721
                     </span>
-                </div>
+                </div>*/}
             </div>
             <div className="nav">
                 <ul className="list-unstyled">

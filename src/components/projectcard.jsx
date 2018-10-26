@@ -15,7 +15,7 @@ const ProjectCard = (props) => {
                     <div className="project-summary">
                         {props.data.summary}
                     </div>
-                    <Link className="project-link text-uppercase text-bold" to={"projects/" + props.data.slug}>
+                    <Link className="project-link text-uppercase" to={"projects/" + props.data.slug}>
                         View Project
                         <FontAwesomeIcon icon="arrow-right" />
                     </Link>

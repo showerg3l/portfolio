@@ -21,15 +21,22 @@
 #project {
     flex: 0 0 100%;
     position: relative;
+
     .project-image {
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
-        height: 335px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        height: 285px;
+        @media screen and (min-width: 992px) {
+            height: 325px;
+        }
+        @media screen and (min-width: 1200px) {
+            height: 365px;
+        }
     }
 
     .content {

@@ -12,7 +12,7 @@ const Project = (props) => {
             name: 'Super theme',
             summary: 'A Moodle theme to end all Moodle themes',
             image: imgSuper,
-            featured: false,
+            featured: true,
             tags: [
                 "PHP",
                 "Moodle",
@@ -28,6 +28,17 @@ const Project = (props) => {
             tags: [
                 "React",
                 "Moodle",
+                "Design"
+            ]
+        },
+        {
+            slug: 'support-timer-app',
+            name: 'Support Timer App',
+            summary: 'A simple app, with business integrations',
+            image: imgSuper,
+            featured: false,
+            tags: [
+                "React",
                 "Design"
             ]
         }
