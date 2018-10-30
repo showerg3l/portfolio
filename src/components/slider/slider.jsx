@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Dot from './dot';
 import Arrow from './arrows';
 import Slide1 from './slide1';
 import Slide2 from './slide2';
@@ -11,7 +12,15 @@ class Slider extends React.Component {
         super(props);
         this.state = {
             animating: false,
-            currentSlide: 1
+            currentSlide: 1,
+            dragged: {
+                coords: {
+                    x: null,
+                    y: null
+                },
+                active: false,
+                direction: null
+            }
         };
         this.nextSlide = this.nextSlide.bind(this);
         this.prevSlide = this.prevSlide.bind(this);
@@ -36,12 +45,10 @@ class Slider extends React.Component {
             }
             return;
         });
-        console.log(isSidebar);
         return isSidebar;
     }
 
     handleScroll = (e) => {
-        console.log(e);
         let isSidebar = this.checkIfSidebar(e.path);
 
         if (!isSidebar) {
@@ -54,7 +61,7 @@ class Slider extends React.Component {
         }
     }
 
-    async nextSlide() {
+    nextSlide() {
         if (this.state.currentSlide === this.props.data.totalSlides) {
             return;
         }
@@ -62,33 +69,81 @@ class Slider extends React.Component {
             return;
         }
         
-        await this.setState({
-            animating: true
-        })
-        
-        await this.setState({
-            currentSlide: this.state.currentSlide + 1,
-        });
-        setTimeout(() => {
-            this.setState({
-                animating: false
-            })
-        }, 1500);
+        this.gotToSlide(this.state.currentSlide + 1);
     }
 
-    async prevSlide() {
+    prevSlide() {
         if (this.state.currentSlide === 1) {
             return;
         }
         if (this.state.animating) {
             return;
         }
-        await this.setState({
-            animating: true
+
+        this.gotToSlide(this.state.currentSlide-1);
+    }
+
+    handleTouchStart = (e) => {
+
+        let coords = {
+            x: e.changedTouches[0].pageX,
+            y: e.changedTouches[0].pageY
+        }
+
+        this.setState({
+            dragged: {
+                coords,
+                active: true
+            }
+        });
+    }
+
+    handleTouchMove = (e) => {
+        if (!this.state.dragged.active) {
+            return;
+        }
+
+        let newCoords = {
+            x: e.changedTouches[0].pageX,
+            y: e.changedTouches[0].pageY
+        };
+
+        let startCoords = this.state.dragged.coords;
+
+        if (newCoords.x - startCoords.x > 100) {
+            this.prevSlide();
+        } else if (newCoords.x - startCoords.x < -100) {
+            this.nextSlide();
+        }
+    }
+
+    handleTouchEnd = (e) => {
+        this.setState({
+            dragged: {
+                coords: {
+                    x: null,
+                    y: null
+                },
+                active: false
+            }
         })
+    }
+
+    handleClick = (e) => {
+        let dot = e.target;
+        this.gotToSlide(dot.dataset.target);
+    }
+
+    gotToSlide = async (target = null) => {
+        target = parseInt(target);
+
+        if (this.state.animating) {
+            return;
+        }
 
         await this.setState({
-            currentSlide: this.state.currentSlide - 1,
+            currentSlide: target,
+            animating: true
         });
         setTimeout(() => {
             this.setState({
@@ -100,9 +155,14 @@ class Slider extends React.Component {
     render() {
         return (
             <div id="slider">
-                <div className="slides-container" style={{
-                    transition: 'transform ease-out 0.45s'
-                }}>
+                <div className="slides-container" 
+                     onTouchMove={this.handleTouchMove} 
+                     onTouchStart={this.handleTouchStart} 
+                     onTouchEnd={this.handleTouchEnd}
+                     onTouchCancel={this.handleTouchEnd} 
+                     style={{
+                        transition: 'transform ease-out 0.45s'
+                     }}>
                     {this.props.data.slides.map((slide, i) => {
                         slide.i = i + 1;
                         if (i % 3 === 0) {
@@ -116,6 +176,15 @@ class Slider extends React.Component {
                     })}
                 </div>
                 <div className="pager">
+                    {
+                        this.props.data.slides.map((slide, i) => {
+                            let active = false;
+                            if ((i+1) === this.state.currentSlide) {
+                                active = true;
+                            }
+                            return <Dot handleClick={this.handleClick} active={active} key={i} data={slide} count={i} />
+                        })
+                    }
                 </div>
                 <div className="arrows">
                     <Arrow direction="prev" handleClick={this.prevSlide}></Arrow>

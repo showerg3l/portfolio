@@ -563,6 +563,29 @@ body {
   height: 200px;
   background-color: #ddd; }
 
+.pager {
+  position: absolute;
+  bottom: 50px;
+  left: 100px;
+  right: 100px;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.pager .dot {
+  border-radius: 3px;
+  background-color: rgba(93, 14, 14, 0.2);
+  border: solid 1px #5d0e0e;
+  width: 20px;
+  height: 20px;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease; }
+
+.pager .dot.active, .pager .dot:active, .pager .dot:hover {
+  background-color: #5d0e0e; }
+
 .projects {
   display: flex;
   flex-wrap: wrap;

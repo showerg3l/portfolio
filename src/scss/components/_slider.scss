@@ -203,3 +203,29 @@
     height: 200px;
     background-color: #ddd;
 }
+
+.pager {
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+    right: 100px;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .dot {
+        border-radius: 3px;
+        background-color: $red-20;
+        border: solid 1px $red;
+        width: 20px;
+        height: 20px;
+        margin: 0 15px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        &.active,
+        &:active,
+        &:hover {
+            background-color: $red;
+        }
+    }
+}
