@@ -762,6 +762,18 @@ body {
 #about .content {
   padding: 135px 50px 50px; }
 
+@media screen and (max-width: 455px) {
+  .about-me .desc,
+  .about-me .job-history {
+    max-width: 100%;
+    flex-basis: 100%; } }
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .about-me .desc,
+  .about-me .job-history {
+    max-width: 100%;
+    flex-basis: 100%; } }
+
 #projects .content {
   background-color: transparent;
   display: flex;
