@@ -51,7 +51,7 @@ class Slide extends React.Component {
                             <p>
                                 {this.state.data.summary}
                             </p>
-                            <Link className="project-link text-uppercase" to={"projects/" + this.state.data.slug}>
+                            <Link className="project-link text-uppercase text-white" to={"projects/" + this.state.data.slug}>
                                 View Project
                                 <FontAwesomeIcon icon="arrow-right" />
                             </Link>
