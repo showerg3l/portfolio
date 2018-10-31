@@ -595,13 +595,6 @@ body {
   flex: 0 0 100%;
   padding: 30px 0; }
 
-@media screen and (min-width: 1200px) {
-  .project {
-    flex: 0 0 50%; } }
-
-.project.featured {
-  flex: 0 0 100%; }
-
 .project .project-wrapper {
   position: relative;
   padding: 0 15px; }
@@ -609,12 +602,11 @@ body {
 .project .project-wrapper figure {
   margin: 0; }
 
-.project .project-wrapper .project-image {
-  border-radius: 4px 4px 0 0;
+.project .project-wrapper .project-figure {
   width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block; }
+  height: 300px;
+  position: absolute;
+  left: 0; }
 
 .project .project-wrapper .project-content {
   position: relative;
