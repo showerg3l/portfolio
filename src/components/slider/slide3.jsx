@@ -24,7 +24,6 @@ class Slide extends React.Component {
         
         let additionalclasses = 'fadeOut';
         if (this.props.currentSlide === this.props.data.i) {
-            console.log(this.props);
             additionalclasses = 'fadeIn';
         }
         return (

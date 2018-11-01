@@ -251,10 +251,14 @@ body {
   height: 100%; }
 
 .wrapper {
-  display: flex;
+  display: block;
   flex-wrap: wrap;
   width: 100%;
   height: 100%; }
+
+@media screen and (min-width: 992px) {
+  .wrapper {
+    display: flex; } }
 
 .content-left {
   flex: 0 0 100%; }
@@ -605,8 +609,16 @@ body {
 
 .project .project-wrapper .project-figure {
   position: absolute;
-  top: -50%;
-  left: -120px; }
+  top: -25%;
+  left: -25px; }
+
+@media screen and (min-width: 992px) {
+  .project .project-wrapper .project-figure {
+    left: -65px; } }
+
+@media screen and (min-width: 1200px) {
+  .project .project-wrapper .project-figure {
+    left: -120px; } }
 
 .project .project-wrapper .project-figure svg {
   width: 100%; }
@@ -619,27 +631,31 @@ body {
 .project .project-wrapper .project-figure .b {
   fill: transparent; }
 
+.project .project-wrapper .project-figure .l6 {
+  stroke-dasharray: 292.74;
+  stroke-dashoffset: 292.74;
+  transition: stroke-dashoffset 0.5s ease; }
+
 .project .project-wrapper .project-figure .l5 {
   stroke-dasharray: 581.24;
   stroke-dashoffset: 581.24;
   transition: stroke-dashoffset 0.5s ease; }
 
-.project .project-wrapper .project-figure.active {
-  stroke-dashoffset: 0; }
-
 .project .project-wrapper .project-content {
+  opacity: 0;
+  transition: opacity 0.5s ease;
   position: relative;
-  padding: 15px 15px 15px 65px;
+  padding: 15px 15px 15px 110px;
   border-radius: 0 0 4px 4px; }
 
 .project .project-wrapper .project-content .project-title {
   color: #5d0e0e;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
   font-weight: 700;
-  font-size: 20px; }
+  font-size: 32px; }
 
 .project .project-wrapper .project-content .project-summary {
-  margin-bottom: 20px; }
+  margin-bottom: 2rem; }
 
 .project .project-wrapper .project-content .project-link svg {
   margin-left: 10px; }
@@ -649,6 +665,12 @@ body {
   bottom: 0;
   left: 0;
   display: flex; }
+
+.project .project-wrapper.active .project-content {
+  opacity: 1; }
+
+.project .project-wrapper.active .l6, .project .project-wrapper.active .l5 {
+  stroke-dashoffset: 0; }
 
 .divider.dir-col {
   width: 10px;
