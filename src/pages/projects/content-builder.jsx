@@ -17,7 +17,7 @@ const SuperTheme = () => {
                             Projects
                         </Link>
                         <div className="project-title">
-                            <h2 className="text-red">Super Theme</h2>
+                            <h2 className="text-red">Content Builder</h2>
                         </div>
                         <div className="tags">
                             <span className="text-red">

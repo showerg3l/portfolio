@@ -6,11 +6,11 @@ const ProjectCard = (props) => {
     return (
         <div className={"project"}>
             <div className="project-wrapper">
-                <div className="project-figure background-wrapper-bottom">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1525.243 1084.243">
-                        <g transform="translate(-397.379 1.621)">
-                            <line className="a l5" x2="411" y2="411" transform="translate(1485.5 669.5)"/>
-                            <line className="a l6" x2="207" y2="207" transform="translate(1407.5 873.5)"/>
+                <div className="project-figure">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 461 581.24">
+                        <g>
+                            <line className="a l5" x2="411" y2="411" transform={"translate(50 0) rotate("+props.data.rotate+" 205.5 205.5)"}/>
+                            <line className="a l6" x2="207" y2="207" transform="translate(0 200)"/>
                         </g>
                     </svg>
                 </div>

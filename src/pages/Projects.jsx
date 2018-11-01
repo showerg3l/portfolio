@@ -11,6 +11,7 @@ const Project = (props) => {
             slug: 'super-theme',
             name: 'Super theme',
             summary: 'A Moodle theme to end all Moodle themes',
+            rotate: 0,
             image: imgSuper,
             featured: true,
             tags: [
@@ -23,6 +24,7 @@ const Project = (props) => {
             slug: 'content-builder',
             name: 'Content Builder',
             summary: 'A well known solution, integrated into a new platform',
+            rotate: 90,
             image: imgSuper,
             featured: false,
             tags: [
@@ -35,6 +37,7 @@ const Project = (props) => {
             slug: 'support-timer-app',
             name: 'Support Timer App',
             summary: 'A simple app, with business integrations',
+            rotate: 45,
             image: imgSuper,
             featured: false,
             tags: [
