@@ -1,7 +1,5 @@
 import React from 'react';
 
-<path className="b b1" d="M399,159.5l919.508,919.508h-218.3L399,379.211Z" style={{transform: "rotate(45deg) translate(100px, -80px)", transformOrigin: "50%"}}/>
-
 const SliderBottomSVG = (props) => {
     let lines = [
         {
