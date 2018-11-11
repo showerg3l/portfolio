@@ -3,8 +3,6 @@ import {Link} from 'react-router-dom';
 
 import ProjectCard from '../components/projectcard';
 
-import imgSuper from '../images/rawpixel-603646-unsplash.jpg';
-
 const Project = (props) => {
     let projects = [
         {
@@ -12,7 +10,6 @@ const Project = (props) => {
             name: 'Super theme',
             summary: 'A Moodle theme to end all Moodle themes',
             rotate: 0,
-            image: imgSuper,
             featured: true,
             tags: [
                 "PHP",
@@ -25,7 +22,6 @@ const Project = (props) => {
             name: 'Content Builder',
             summary: 'A well known solution, integrated into a new platform',
             rotate: 90,
-            image: imgSuper,
             featured: false,
             tags: [
                 "React",
@@ -38,7 +34,6 @@ const Project = (props) => {
             name: 'Support Timer App',
             summary: 'A simple app, with business integrations',
             rotate: 45,
-            image: imgSuper,
             featured: false,
             tags: [
                 "React",

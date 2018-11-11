@@ -18,7 +18,7 @@ const Home = ({location}) => {
             },
             {
                 title: 'Support Timer App',
-                summary: 'A Moodle theme to end all Moodle themes',
+                summary: 'A simple app, with business integrations',
                 slug: 'support-timer-app'
             }
         ]

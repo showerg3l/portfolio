@@ -18,9 +18,9 @@ class ProjectCard extends Component {
     isInViewport = (elem) => {
         var bounding = elem.getBoundingClientRect();
         return (
-            bounding.top >= 0 &&
+            bounding.top >= (0 - bounding.height / 2) &&
             bounding.left >= 0 &&
-            bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            (bounding.bottom - (bounding.height / 2)) <= (window.innerHeight || document.documentElement.clientHeight) &&
             bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
         );
     };

@@ -4,15 +4,10 @@ import {Link} from 'react-router-dom';
 
 //import ContactForm from '../components/contactForm';
 
-import me from '../images/pablo-guerrero-568547-unsplash.jpg';
-
 const Contact = () => {
     return (
         <div id="contact">
             <div className="page-content">
-                {<div className="about-hero-image" style={{
-                    "backgroundImage" : "url("+me+")"
-                }}></div>}
                 <div className="content">
                     <h2>How to get in touch</h2>
                     <p>

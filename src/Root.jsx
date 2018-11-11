@@ -1,8 +1,9 @@
 import React from 'react';
-import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+
+import ScrollToTop from './components/scrollToTop';
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -18,8 +19,8 @@ import Sidebar from './components/sidebar';
 
 
 const Root = ({ store }) => (
-    <Provider store={store}>
-        <Router>
+    <Router>
+        <ScrollToTop>
             <Route
                 render={({ location }) => (
                     <div className="wrapper">
@@ -45,8 +46,8 @@ const Root = ({ store }) => (
                     </div>
                 )}
             />
-        </Router>
-    </Provider>
+        </ScrollToTop>
+    </Router>
 )
 
 export default Root

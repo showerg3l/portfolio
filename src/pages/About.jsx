@@ -1,7 +1,6 @@
 import React from 'react';
 
 import JobList from '../components/job-list';
-import me from '../images/pablo-guerrero-568547-unsplash.jpg';
 
 const jobData = [
     {

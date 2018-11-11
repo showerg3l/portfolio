@@ -20,7 +20,8 @@ class Slider extends React.Component {
                 },
                 active: false,
                 direction: null
-            }
+            },
+            showInfo: false
         };
         this.nextSlide = this.nextSlide.bind(this);
         this.prevSlide = this.prevSlide.bind(this);
@@ -38,12 +39,12 @@ class Slider extends React.Component {
         let isSidebar = false;
         path.map((item,i) => {
             if (item.classList === undefined) {
-                return
+                return item;
             }
             if (item.classList.contains("sidebar")) {
                 isSidebar = true;
             }
-            return;
+            return item;
         });
         return isSidebar;
     }
@@ -135,7 +136,7 @@ class Slider extends React.Component {
     }
 
     gotToSlide = async (target = null) => {
-        target = parseInt(target);
+        target = parseInt(target, 10);
 
         if (this.state.animating) {
             return;
@@ -143,13 +144,22 @@ class Slider extends React.Component {
 
         await this.setState({
             currentSlide: target,
-            animating: true
+            animating: true,
+            showInfo: false
         });
         setTimeout(() => {
             this.setState({
                 animating: false
             })
         }, 1500);
+    }
+
+    toggleInfo = (e) => {
+        console.log("clicked");
+        e.preventDefault();
+        this.setState(prevState => ({
+            showInfo: !prevState.showInfo
+        }));
     }
 
     render() {
@@ -165,12 +175,13 @@ class Slider extends React.Component {
                      }}>
                     {this.props.data.slides.map((slide, i) => {
                         slide.i = i + 1;
+                        slide.showInfo = this.state.showInfo;
                         if (i % 3 === 0) {
-                            return <Slide1 key={i} data={slide} currentSlide={this.state.currentSlide} />;
+                            return <Slide1 key={i} data={slide} toggleInfo={this.toggleInfo} currentSlide={this.state.currentSlide} />;
                         } else if (i % 3 === 1) {
-                            return <Slide2 key={i} data={slide} currentSlide={this.state.currentSlide} />;
+                            return <Slide2 key={i} data={slide} toggleInfo={this.toggleInfo} currentSlide={this.state.currentSlide} />;
                         } else {
-                            return <Slide3 key={i} data={slide} currentSlide={this.state.currentSlide} />;   
+                            return <Slide3 key={i} data={slide} toggleInfo={this.toggleInfo} currentSlide={this.state.currentSlide} />;   
                         }
                         
                     })}
