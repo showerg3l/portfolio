@@ -2,31 +2,11 @@ import React from 'react';
 
 import Slider from '../components/slider/slider';
 
-const Home = ({location}) => {
-    const sliderdata = {
-        totalSlides: 3,
-        slides: [
-            {
-                title: 'Super Theme',
-                summary: 'A Moodle theme to end all Moodle themes',
-                slug: 'super-theme'
-            },
-            {
-                title: 'Content Builder',
-                summary: 'A well known solution, integrated into a new platform',
-                slug: 'content-builder'
-            },
-            {
-                title: 'Support Timer App',
-                summary: 'A simple app, with business integrations',
-                slug: 'support-timer-app'
-            }
-        ]
-    }
+const Home = (props) => {
     return (
         <div id="home" className="page-content">
             <div className="content">
-                <Slider data={sliderdata}></Slider>
+                <Slider projects={props.projects}></Slider>
             </div>
         </div>
     )

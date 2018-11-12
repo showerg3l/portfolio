@@ -19,7 +19,7 @@ const Slide = (props) => {
             <div className="slide-wrapper">
                 <div className="slide-title">
                     <Link to={"projects/" + props.data.slug}>
-                        {props.data.title}
+                        {props.data.name}
                     </Link>
                 </div>
                 <div className={

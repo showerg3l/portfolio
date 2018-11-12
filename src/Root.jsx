@@ -9,14 +9,22 @@ import Home from './pages/Home';
 import About from './pages/About';
 
 import Projects from './pages/Projects';
-import Super from './pages/projects/super-theme';
-import CB from './pages/projects/content-builder';
-import STA from './pages/projects/support-timer-app';
+import Project from './pages/Project';
 
 import Contact from './pages/Contact';
 
 import Sidebar from './components/sidebar';
 
+import data from './data.json';
+
+const slidedata = [];
+
+data.projects.map(project => {
+    if (project.featured) {
+        slidedata.push(project);
+    }
+    return project;
+});
 
 const Root = ({ store }) => (
     <Router>
@@ -31,13 +39,21 @@ const Root = ({ store }) => (
                             <TransitionGroup>
                                 <CSSTransition key={location.key} classNames="fade" timeout={300}>
                                     <Switch location={location}>
-                                        <Route exact path="/" render={Home} />
+                                        <Route exact path="/" render={(props) => (
+                                            <Home {...props} projects={slidedata} />
+                                        )} />
                                         <Route exact path="/about" render={About} />
-                                        <Route exact path="/projects" render={Projects} />
-                                        <Route exact path="/projects/:tag(PHP|SCSS|Moodle|JS|Design|React)" render={Projects} />
-                                        <Route exact path="/projects/super-theme" render={Super} />
-                                        <Route exact path="/projects/content-builder" render={CB} />
-                                        <Route exact path="/projects/support-timer-app" render={STA} />
+                                        <Route exact path="/projects" render={(props) => (
+                                            <Projects {...props} data={data} />
+                                        )} />
+                                        <Route exact path="/projects/:tag(PHP|SCSS|Moodle|JS|Design|React)" render={(props) => (
+                                            <Projects {...props} projects={data.projects} />
+                                        )} />
+                                        {data.projects.map((project, i) => (
+                                            <Route exact key={i} path={"/projects/" + project.slug} render={(props) => (
+                                                <Project {...props} project={project} />
+                                            )} />    
+                                        ))}
                                         <Route exact path="/contact" render={Contact} />
                                     </Switch>
                                 </CSSTransition>

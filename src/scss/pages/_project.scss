@@ -80,10 +80,10 @@
 
 @keyframes fadeInL5 {
     0% {
-        stroke-dashoffset: 488.11;
+        stroke-dashoffset: 473.76;
     }
     50% {
-        stroke-dashoffset: 488.11;
+        stroke-dashoffset: 473.76;
     }
     100% {
         stroke-dashoffset: 0;
@@ -187,6 +187,10 @@
                 animation-name: fadeInL6;
             }
         }
+    }
+
+    .project-return {
+        opacity: 0;
     }
 
     .page-content {

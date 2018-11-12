@@ -26,7 +26,7 @@ class Slide extends React.Component {
                 <div className="slide-wrapper">
                     <div className="slide-title">
                     <Link to={"projects/" + this.props.data.slug}>
-                        {this.props.data.title}
+                        {this.props.data.name}
                     </Link>
                     </div>
                     <div className={

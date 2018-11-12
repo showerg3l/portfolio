@@ -63,7 +63,7 @@ class Slider extends React.Component {
     }
 
     nextSlide() {
-        if (this.state.currentSlide === this.props.data.totalSlides) {
+        if (this.state.currentSlide === this.props.projects.length) {
             return;
         }
         if (this.state.animating) {
@@ -155,7 +155,6 @@ class Slider extends React.Component {
     }
 
     toggleInfo = (e) => {
-        console.log("clicked");
         e.preventDefault();
         this.setState(prevState => ({
             showInfo: !prevState.showInfo
@@ -173,7 +172,7 @@ class Slider extends React.Component {
                      style={{
                         transition: 'transform ease-out 0.45s'
                      }}>
-                    {this.props.data.slides.map((slide, i) => {
+                    {this.props.projects.map((slide, i) => {
                         slide.i = i + 1;
                         slide.showInfo = this.state.showInfo;
                         if (i % 3 === 0) {
@@ -188,7 +187,7 @@ class Slider extends React.Component {
                 </div>
                 <div className="pager">
                     {
-                        this.props.data.slides.map((slide, i) => {
+                        this.props.projects.map((slide, i) => {
                             let active = false;
                             if ((i+1) === this.state.currentSlide) {
                                 active = true;
