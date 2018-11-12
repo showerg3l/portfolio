@@ -41,8 +41,9 @@ const Root = ({ store }) => (
                             <Route path="/" component={Sidebar} />
                         </div>
                         <div className="content-right">
+                        {console.log(location)}
                         <PoseGroup>
-                                <RouteContainer key={location.key}>
+                                <RouteContainer key={location.pathname}>
                                     <Switch location={location}>
                                         <Route key="home" exact path="/" render={(props) => (
                                             <Home {...props} projects={slidedata} />
