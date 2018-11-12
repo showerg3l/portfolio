@@ -1,7 +1,28 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import posed from 'react-pose';
 
+
+const Return = posed.div({
+    enter: { x: 0, opacity: 1 },
+    exit: { x: -50, opacity: 0 }
+});
+
+const Box = posed.div({
+    enter: { opacity: 1, delay: 100 },
+    exit: { opacity: 0 }
+});
+
+const Box2 = posed.div({
+    enter: { opacity: 1, delay: 200 },
+    exit: { opacity: 0 }
+});
+
+const Box3 = posed.div({
+    enter: { opacity: 1, delay: 400 },
+    exit: { opacity: 0 }
+});
 
 const Project = (props) => {
     return (
@@ -23,14 +44,16 @@ const Project = (props) => {
                 <div className="page-content">
                     <div className="content">
                         <div className="project-header">
-                            <Link className="returnto text-uppercase text-bold" to="/projects">
-                                <FontAwesomeIcon icon="arrow-left" />
-                                Projects
-                            </Link>
-                            <div className="project-title">
+                            <Return>
+                                <Link className="returnto text-uppercase text-bold" to="/projects">
+                                    <FontAwesomeIcon icon="arrow-left" />
+                                    Projects
+                                </Link>
+                            </Return>
+                            <Box className="project-title">
                                 <h2 className="text-red">{props.project.name}</h2>
-                            </div>
-                            <div className="meta">
+                            </Box>
+                            <Box2 className="meta">
                                 <div className="tags">
                                     <h4>Skills used</h4>
                                     <div className="tags-list">
@@ -43,14 +66,14 @@ const Project = (props) => {
                                     <h4>Launched</h4>
                                     <p className="text-large">{props.project.launched}</p>
                                 </div>
-                            </div>
+                            </Box2>
                         </div>
-                        <div className="project-body">
+                        <Box3 className="project-body">
                             <div className="project-info" dangerouslySetInnerHTML={{__html: props.project.content}} >
                             </div>
                             <div className="additonal-images">
                             </div>
-                        </div>
+                        </Box3>
                     </div>
                 </div>
             </div>

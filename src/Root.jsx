@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import posed, { PoseGroup } from 'react-pose';
 
 import ScrollToTop from './components/scrollToTop';
 
@@ -26,6 +26,11 @@ data.projects.map(project => {
     return project;
 });
 
+const RouteContainer = posed.div({
+    enter: { opacity: 1, delay: 250, beforeChildren: true },
+    exit: { opacity: 0 }
+});
+
 const Root = ({ store }) => (
     <Router>
         <ScrollToTop>
@@ -36,8 +41,8 @@ const Root = ({ store }) => (
                             <Route path="/" component={Sidebar} />
                         </div>
                         <div className="content-right">
-                            <TransitionGroup>
-                                <CSSTransition key={location.key} classNames="fade" timeout={300}>
+                        <PoseGroup>
+                                <RouteContainer key={location.key}>
                                     <Switch location={location}>
                                         <Route exact path="/" render={(props) => (
                                             <Home {...props} projects={slidedata} />
@@ -56,8 +61,8 @@ const Root = ({ store }) => (
                                         ))}
                                         <Route exact path="/contact" render={Contact} />
                                     </Switch>
-                                </CSSTransition>
-                            </TransitionGroup>
+                                </RouteContainer>
+                            </PoseGroup>
                         </div>
                     </div>
                 )}
