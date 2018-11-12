@@ -44,22 +44,22 @@ const Root = ({ store }) => (
                         <PoseGroup>
                                 <RouteContainer key={location.key}>
                                     <Switch location={location}>
-                                        <Route exact path="/" render={(props) => (
+                                        <Route key="home" exact path="/" render={(props) => (
                                             <Home {...props} projects={slidedata} />
                                         )} />
-                                        <Route exact path="/about" render={About} />
-                                        <Route exact path="/projects" render={(props) => (
-                                            <Projects {...props} data={data} />
+                                        <Route key="about" exact path="/about" render={About} />
+                                        <Route key="projects" exact path="/projects" render={(props) => (
+                                            <Projects {...props} projects={data.projects} />
                                         )} />
-                                        <Route exact path="/projects/:tag(PHP|SCSS|Moodle|JS|Design|React)" render={(props) => (
+                                        <Route key="projects-tag" exact path="/projects/:tag(PHP|SCSS|Moodle|JS|Design|React)" render={(props) => (
                                             <Projects {...props} projects={data.projects} />
                                         )} />
                                         {data.projects.map((project, i) => (
-                                            <Route exact key={i} path={"/projects/" + project.slug} render={(props) => (
+                                            <Route key={project.slug} exact key={i} path={"/projects/" + project.slug} render={(props) => (
                                                 <Project {...props} project={project} />
                                             )} />    
                                         ))}
-                                        <Route exact path="/contact" render={Contact} />
+                                        <Route key="contact" exact path="/contact" render={Contact} />
                                     </Switch>
                                 </RouteContainer>
                             </PoseGroup>

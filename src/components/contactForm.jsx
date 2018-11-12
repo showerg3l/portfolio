@@ -14,7 +14,6 @@ class ContactForm extends Component {
     }
 
     onSubmit = (e) => {
-        console.log("submitted");
         e.preventDefault();
         let msg = {
             Subject: "New message from the portfolio",
