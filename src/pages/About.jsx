@@ -1,4 +1,5 @@
 import React from 'react';
+import posed from 'react-pose';
 
 import JobList from '../components/job-list';
 
@@ -20,6 +21,36 @@ const jobData = [
     }
 ];
 
+const Box = posed.div({
+    enter: {
+        opacity: 1,
+        delay: 100
+    },
+    exit: {
+        opacity: 0
+    }
+});
+
+const Box2 = posed.div({
+    enter: {
+        opacity: 1,
+        delay: 200
+    },
+    exit: {
+        opacity: 0
+    }
+});
+
+const Box3 = posed.div({
+    enter: {
+        opacity: 1,
+        delay: 400
+    },
+    exit: {
+        opacity: 0
+    }
+});
+
 
 const About = () => {
     return (
@@ -27,8 +58,10 @@ const About = () => {
             <div className="page-content">
                 <div className="content">
                     <div className="about-me">
-                        <h2>Who Am I</h2>
-                        <div className="attributes">
+                        <Box>
+                            <h2>Who Am I</h2>
+                        </Box>
+                        <Box2 className="attributes">
                             <p>
                                 <span className="text-red">Age:</span><span className="text-bold">&nbsp;25</span>
                             </p>
@@ -38,8 +71,8 @@ const About = () => {
                             <p>
                                 <span className="text-red">Skills:</span><span className="text-bold">&nbsp; PHP . JS . React . HTML . CSS</span>
                             </p>
-                        </div>
-                        <div className="row">
+                        </Box2>
+                        <Box3 className="row">
                             <div className="desc col-6">
                                 <p>
                                     I’m a hard working and enthusiastic developer with a passion
@@ -83,7 +116,7 @@ const About = () => {
                                     })}
                                 </div>
                             </div>
-                        </div>
+                        </Box3>
                     </div>
                 </div>
             </div>
