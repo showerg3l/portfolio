@@ -5,7 +5,7 @@ import ProjectCard from '../components/projectcard';
 
 const Project = (props) => {
     let tags = [];
-    props.data.projects.map(project => {
+    props.projects.map(project => {
         project.tags.map(tag => {
             if (!tags.includes(tag)) {
                 tags.push(tag);
@@ -32,7 +32,7 @@ const Project = (props) => {
                 </div>
                 <div className="projects">
                     {
-                        props.data.projects.map((project, i) => {
+                        props.projects.map((project, i) => {
                             if (props.match.params.tag && project.tags.includes(props.match.params.tag)) {
                                 return <ProjectCard key={i} data={project} />
                             } else if (!props.match.params.tag) {
