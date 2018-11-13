@@ -6,7 +6,14 @@ import posed from 'react-pose';
 
 const Return = posed.div({
     enter: { x: 0, opacity: 1 },
-    exit: { x: -50, opacity: 0 }
+    exit: { x: -50, opacity: 0 },
+    hoverable: true,
+    init: {
+        x:0
+    },
+    hover: {
+        x: -10
+    }
 });
 
 const Box = posed.div({
@@ -21,7 +28,7 @@ const Box2 = posed.div({
 
 const Box3 = posed.div({
     enter: { opacity: 1, delay: 400 },
-    exit: { opacity: 0 }
+    exit: { opacity: 0 },
 });
 
 const Project = (props) => {
@@ -44,7 +51,7 @@ const Project = (props) => {
                 <div className="page-content">
                     <div className="content">
                         <div className="project-header">
-                            <Return>
+                            <Return style={{"display": "inline-block"}}>
                                 <Link className="returnto text-uppercase text-bold" to="/projects">
                                     <FontAwesomeIcon icon="arrow-left" />
                                     Projects
