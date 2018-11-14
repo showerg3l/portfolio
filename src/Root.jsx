@@ -28,7 +28,7 @@ data.projects.map(project => {
 
 const RouteContainer = posed.div({
     enter: { opacity: 1, delay: 250, beforeChildren: true},
-    exit: { opacity: 0 }
+    exit: { opacity: 0, transition:{duration: 250} }
 });
 
 
