@@ -45,7 +45,7 @@ const Project = (props) => {
         <div id="project" className={"page-"+props.project.slug}>
             <div className="project-wrapper">
                 <div className={"project-svg fadeIn"}>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1525 1084">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1525 370">
                         <g>
                             <line className="a l1" x2="113" y2="113" transform={"translate(1383 0) rotate("+props.project.rotate+" 0 0)"}/>
                             <line className="a l2" x2="264" y2="264" transform={"translate(512 0) rotate("+props.project.rotate+" 0 0)"}/>
