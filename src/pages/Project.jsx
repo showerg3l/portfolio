@@ -61,7 +61,6 @@ const Project = (props) => {
                     <div className="content">
                         <div className="project-header">
                             <Return style={{"display": "inline-block"}}>
-                                {console.log(props)}
                                 <Link className="returnto text-uppercase text-bold" to={"/projects"} onClick={goBack}>
                                     <FontAwesomeIcon icon="arrow-left" />
                                     Back
