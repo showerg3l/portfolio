@@ -71,7 +71,7 @@ class ProjectCard extends Component {
                         <div className="project-summary">
                             {this.props.data.summary}
                         </div>
-                        <Link className="project-link text-bold" to={"projects/" + this.props.data.slug}>
+                        <Link className="project-link text-bold" to={{ pathname:"projects/" + this.props.data.slug, state: {from:'/projects'}}}>
                             View Project
                             <FontAwesomeIcon icon="arrow-right" />
                         </Link>

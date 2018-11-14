@@ -4,10 +4,16 @@ import {Link} from 'react-router-dom';
 import ProjectCard from '../components/projectcard';
 
 const Project = (props) => {
+    let validTags = [
+        "PHP",
+        "React",
+        "Moodle",
+        "Design"
+    ]
     let tags = [];
     props.projects.map(project => {
         project.tags.map(tag => {
-            if (!tags.includes(tag)) {
+            if (!tags.includes(tag) && validTags.indexOf(tag) !== -1) {
                 tags.push(tag);
                 return null;
             }

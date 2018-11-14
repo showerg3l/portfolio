@@ -11,6 +11,7 @@ body {
     font-family: $base-font;
     color: $gray-dark;
     background-color: $gray;
+    overflow-x: hidden;
     @extend p;
 }
 
@@ -43,9 +44,11 @@ body {
 .content-right {
     flex: 0 1 100%;
     background-color: #efefef;
-    display: flex;
     @media screen and (min-width: 768px) {
         max-width: calc(100% - 400px);
+    }
+    > div {
+        height: 100%;
     }
 }
 

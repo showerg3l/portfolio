@@ -32,6 +32,15 @@ const Box3 = posed.div({
 });
 
 const Project = (props) => {
+    let returnURL = "/projects";
+    if (props.location.state && props.location.state.from) {
+        returnURL = props.location.state.from;
+    }
+
+    let goBack = (e) => {
+        e.preventDefault();
+        props.history.push(returnURL);
+    }
     return (
         <div id="project" className={"page-"+props.project.slug}>
             <div className="project-wrapper">
@@ -52,9 +61,10 @@ const Project = (props) => {
                     <div className="content">
                         <div className="project-header">
                             <Return style={{"display": "inline-block"}}>
-                                <Link className="returnto text-uppercase text-bold" to="/projects">
+                                {console.log(props)}
+                                <Link className="returnto text-uppercase text-bold" to={"/projects"} onClick={goBack}>
                                     <FontAwesomeIcon icon="arrow-left" />
-                                    Projects
+                                    Back
                                 </Link>
                             </Return>
                             <Box className="project-title">

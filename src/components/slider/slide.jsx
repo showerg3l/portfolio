@@ -5,19 +5,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SliderTopSVG from './sliderTopSVG';
 import SliderBottomSVG from './sliderBottomSVG';
 
-const Slide = (props) => {   
+const Slide = (props) => {
     let additionalclasses = 'fadeOut';
-    if (props.currentSlide === props.data.i) {
+    if (props.currentSlide === props.data.i && props.loaded) {
         additionalclasses = 'fadeIn';
     }
     return (
         <div className={"slide " + additionalclasses}>
             <div className="background-wrapper-top">
-                <SliderTopSVG rotation="90" />
+                <SliderTopSVG rotation={props.data.rotate} />
             </div>
             <div className="slide-wrapper">
                 <div className="slide-title">
-                    <Link to={"projects/" + props.data.slug}>
+                    <Link to={"projects/" + props.data.slug} onClick={(e) => props.delayTransition(e, props.data.slug)}>
                         {props.data.name}
                     </Link>
                 </div>
@@ -37,7 +37,7 @@ const Slide = (props) => {
                 </div>
             </div>
             <div className="background-wrapper-bottom">
-                <SliderBottomSVG rotation="90" />
+                <SliderBottomSVG rotation={props.data.rotate} />
             </div>
         </div>
     )

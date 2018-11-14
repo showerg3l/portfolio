@@ -4,9 +4,11 @@ import Slider from '../components/slider/slider';
 
 const Home = (props) => {
     return (
-        <div id="home" className="page-content">
+        <div id="home">
+            <div className="page-content">
             <div className="content">
                 <Slider projects={props.projects}></Slider>
+            </div>
             </div>
         </div>
     )

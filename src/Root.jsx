@@ -27,11 +27,12 @@ data.projects.map(project => {
 });
 
 const RouteContainer = posed.div({
-    enter: { opacity: 1, delay: 250, beforeChildren: true },
+    enter: { opacity: 1, delay: 250, beforeChildren: true},
     exit: { opacity: 0 }
 });
 
-const Root = ({ store }) => (
+
+const Root = () => (
     <Router>
         <ScrollToTop>
             <Route
@@ -41,28 +42,27 @@ const Root = ({ store }) => (
                             <Route path="/" component={Sidebar} />
                         </div>
                         <div className="content-right">
-                        {console.log(location)}
                         <PoseGroup>
-                                <RouteContainer key={location.pathname}>
-                                    <Switch location={location}>
-                                        <Route key="home" exact path="/" render={(props) => (
-                                            <Home {...props} projects={slidedata} />
-                                        )} />
-                                        <Route key="about" exact path="/about" render={About} />
-                                        <Route key="projects" exact path="/projects" render={(props) => (
-                                            <Projects {...props} projects={data.projects} />
-                                        )} />
-                                        <Route key="projects-tag" exact path="/projects/:tag(PHP|SCSS|Moodle|JS|Design|React)" render={(props) => (
-                                            <Projects {...props} projects={data.projects} />
-                                        )} />
-                                        {data.projects.map((project, i) => (
-                                            <Route key={project.slug} exact key={i} path={"/projects/" + project.slug} render={(props) => (
-                                                <Project {...props} project={project} />
-                                            )} />    
-                                        ))}
-                                        <Route key="contact" exact path="/contact" render={Contact} />
-                                    </Switch>
-                                </RouteContainer>
+                            <RouteContainer key={location.pathname}>
+                                <Switch location={location}>
+                                    <Route key="home" exact path="/" render={(props) => (
+                                        <Home {...props} projects={slidedata} />
+                                    )} />
+                                    <Route key="about" exact path="/about" render={About} />
+                                    <Route key="projects" exact path="/projects" render={(props) => (
+                                        <Projects {...props} projects={data.projects} />
+                                    )} />
+                                    <Route key="projects-tag" exact path="/projects/:tag(PHP|SCSS|Moodle|JS|Design|React)" render={(props) => (
+                                        <Projects {...props} projects={data.projects} />
+                                    )} />
+                                    {data.projects.map((project, i) => (
+                                        <Route key={project.slug} exact path={"/projects/" + project.slug} render={(props) => (
+                                            <Project {...props} project={project} />
+                                        )} />    
+                                    ))}
+                                    <Route key="contact" exact path="/contact" render={Contact} />
+                                </Switch>
+                            </RouteContainer>
                             </PoseGroup>
                         </div>
                     </div>

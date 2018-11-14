@@ -1,10 +1,8 @@
 import React from 'react';
+import {withRouter} from 'react-router-dom';
 
 import Dot from './dot';
-import Arrow from './arrows';
-import Slide1 from './slide1';
-import Slide2 from './slide2';
-import Slide3 from './slide3';
+import Slide from './slide';
 
 
 class Slider extends React.Component {
@@ -21,7 +19,8 @@ class Slider extends React.Component {
                 active: false,
                 direction: null
             },
-            showInfo: false
+            showInfo: false,
+            loaded: false
         };
         this.nextSlide = this.nextSlide.bind(this);
         this.prevSlide = this.prevSlide.bind(this);
@@ -29,6 +28,9 @@ class Slider extends React.Component {
 
     componentDidMount() {
         window.addEventListener('wheel', this.handleScroll);
+        setTimeout(() => this.setState({
+            loaded:true
+        }), 0)
     }
 
     componentWillUnmount() {
@@ -161,6 +163,16 @@ class Slider extends React.Component {
         }));
     }
 
+    
+    delayTransition = (e, slug) => {
+        e.preventDefault();
+        const { history: { push } } = this.props;
+        this.setState({
+            loaded: false
+        });
+        setTimeout(()=>push("projects/" + slug, {from: "/"}), 1000);
+    }
+
     render() {
         return (
             <div id="slider">
@@ -175,14 +187,12 @@ class Slider extends React.Component {
                     {this.props.projects.map((slide, i) => {
                         slide.i = i + 1;
                         slide.showInfo = this.state.showInfo;
-                        if (i % 3 === 0) {
-                            return <Slide1 key={i} data={slide} toggleInfo={this.toggleInfo} currentSlide={this.state.currentSlide} />;
-                        } else if (i % 3 === 1) {
-                            return <Slide2 key={i} data={slide} toggleInfo={this.toggleInfo} currentSlide={this.state.currentSlide} />;
-                        } else {
-                            return <Slide3 key={i} data={slide} toggleInfo={this.toggleInfo} currentSlide={this.state.currentSlide} />;   
-                        }
-                        
+                        return <Slide   key={i} 
+                                        delayTransition={(e) => this.delayTransition(e, slide.slug)} 
+                                        loaded={this.state.loaded}
+                                        data={slide} 
+                                        toggleInfo={this.toggleInfo} 
+                                        currentSlide={this.state.currentSlide} />;
                     })}
                 </div>
                 <div className="pager">
@@ -196,13 +206,9 @@ class Slider extends React.Component {
                         })
                     }
                 </div>
-                <div className="arrows">
-                    <Arrow direction="prev" handleClick={this.prevSlide}></Arrow>
-                    <Arrow direction="next" handleClick={this.nextSlide}></Arrow>
-                </div>
             </div>
         )
     }
 }
 
-export default Slider;
+export default withRouter(Slider);
