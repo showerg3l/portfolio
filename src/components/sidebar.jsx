@@ -43,7 +43,6 @@ const Sidebar = (props) => {
             <div className="socials">
                 <Link to="https://twitter.com/showerg3l" className="twitter" target="_blank"><FontAwesomeIcon icon={['fab',"twitter"]} /></Link>
                 <Link to="https://github.com/callumbooth" className="github" target="_blank"><FontAwesomeIcon icon={['fab',"github"]} /></Link>
-                <Link to="https://www.linkedin.com/in/callum-booth-6304a3b4/" className="linkedin" target="_blank"><FontAwesomeIcon icon={['fab',"linkedin-in"]} /></Link>
             </div>
             <div className="contact-info">
                 <div className="email">
