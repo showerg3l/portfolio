@@ -202,7 +202,7 @@ class Slider extends React.Component {
                             if ((i+1) === this.state.currentSlide) {
                                 active = true;
                             }
-                            return <Dot handleClick={this.handleClick} active={active} key={i} data={slide} count={i} />
+                            return <Dot handleClick={this.handleClick} active={active} key={i} count={i} />
                         })
                     }
                 </div>
