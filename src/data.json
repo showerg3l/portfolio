@@ -13,8 +13,7 @@
                 "Design"
             ],
             "launched": "September 2018",
-            "summary": "A Moodle theme to end all Moodle themes",
-            "content": "<p>Described as a Moodle theme to end all Moodle theme, this project solved clear objectives that HowToMoodle had set out. Improve efficiency of their theme development process, improve the roll out process of future updates and improve the UX and UI of configuring the theme.</p><p>The solution I proposed was taken through initial idea to a prototype and then developed into the working and releasable version. It featured a myriad of new features including an import and export of the theme settings.</p><p>The end result was an average of 50% reduced time to create a Moodle look which matches the clients website. An scalable system which allowed new functionality to be deployed to old and new clients alike.</p>"
+            "summary": "A Moodle theme to end all Moodle themes"
         },
         {
             "name": "Content Builder",
@@ -28,8 +27,7 @@
                 "Design"
             ],
             "launched": "In Development",
-            "summary": "A well known solution, integrated into a new platform",
-            "content": "<p>Moodle’s UX for creating content leaves much to be desired and the skill floor for creating beautiful and engaging courses is way higher than it should be. In comes a solution which is very familiar in other platforms **cough** WordPress **cough** and whilst slated by professionals, it does the job, and does it well, when done correctly. The drag and drop page builder.</p><p>This Moodle plugin allows a Moodle user to build a layout and incorporate content with the simple drag and drop functionality we are all used to. It uses React’s shadow DOM with the context api as state management, this combined with react-beautiful-dnd made by Atlassian, make for a powerful combo. </p><p>Moodle uses AMD modules so this project required incorporating each component into the AMD system to allow the files to be integrated succinctly. </p>"
+            "summary": "A well known solution, integrated into a new platform"
         },
         {
             "name": "Support Timer App",
@@ -45,8 +43,7 @@
                 "Design"
             ],
             "launched": "In Alpha",
-            "summary": "A simple app, with business integrations",
-            "content": "<p>This project involved building a platform to allow the support team better track and reliably report on time they spent resolving support tickets. It also required a direct integration with their client relationship management (CRM) system. </p><p>The solution used was an Electron app to allow it to be easily deployed on any OS the company might use, combined with a Graphql API to integrate with the CRM. This graphql api sat as a middleware between any frontend clients we might need, either now or in future and any data stores or 3rd party systems such as the CRM.</p><p>The Electron app housed a React-redux interface which allowed the support team members to login via OAuth to authenticate, find their client, and track the time they have spent on that ticket for the client and submit that time to the CRM. It also allowed for the support to quickly assess the amount of support time the client had left and allow the company to be more proactive about contacting the client about upgrades to their contract.</p>"
+            "summary": "A simple app, with business integrations"
         }
     ]
 }

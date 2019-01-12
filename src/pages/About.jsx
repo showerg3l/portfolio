@@ -98,7 +98,7 @@ const About = () => {
                                     Salesforce CRM and HubSpot marketing platform.
                                 </p>
                                 <p>
-                                    Outside of work I enjoy computer games, having been ranked in the 0.1%
+                                    Outside of work I enjoy computer games, having been ranked in the 1%
                                     for multiple games and photography both of which give me inspiration 
                                     to create new ideas and deal with problems in alternate ways.
                                 </p>

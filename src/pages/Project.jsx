@@ -3,6 +3,10 @@ import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import posed from 'react-pose';
 
+import SuperTheme from './projects/super-theme';
+import ContentBuilder from './projects/content-builder';
+import SupportTimerApp from './projects/support-timer-app';
+
 
 const Return = posed.div({
     enter: { x: 0, opacity: 1 },
@@ -31,6 +35,10 @@ const Box3 = posed.div({
     exit: { opacity: 0 },
 });
 
+const Wrapper = posed.div({
+    enter: {marginRight: '135px'},
+});
+
 const Project = (props) => {
     let returnURL = "/projects";
     if (props.location.state && props.location.state.from) {
@@ -41,6 +49,16 @@ const Project = (props) => {
         e.preventDefault();
         props.history.push(returnURL);
     }
+
+    let ProjectContent;
+    if (props.project.slug === "super-theme") {
+        ProjectContent = SuperTheme;
+    } else if (props.project.slug === "content-builder") {
+        ProjectContent = ContentBuilder;
+    } else if (props.project.slug === "support-timer-app") {
+        ProjectContent = SupportTimerApp;
+    }
+
     return (
         <div id="project" className={"page-"+props.project.slug}>
             <div className="project-wrapper">
@@ -72,7 +90,7 @@ const Project = (props) => {
                             <Box2 className="meta">
                                 <div className="tags">
                                     <h4>Skills used</h4>
-                                    <div className="tags-list">
+                                    <div className="tags-list two-col">
                                         {props.project.tags.map((tag, i) => {
                                             return <div className="tag-item" key={i}>{tag}</div>;
                                         })}
@@ -85,7 +103,8 @@ const Project = (props) => {
                             </Box2>
                         </div>
                         <Box3 className="project-body">
-                            <div className="project-info" dangerouslySetInnerHTML={{__html: props.project.content}} >
+                            <div className="project-info">
+                                <ProjectContent />
                             </div>
                             <div className="additonal-images">
                             </div>

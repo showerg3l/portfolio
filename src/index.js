@@ -10,7 +10,7 @@ import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 library.add(faTwitter, faGithub, faLinkedinIn, faArrowLeft, faArrowRight);
 
-//TODO: add tests
+
 ReactDOM.render(
     <Root />,
     document.getElementById('root')

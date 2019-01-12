@@ -3,6 +3,9 @@
 }
 .job-list-item {
     margin-bottom: 20px;
+    .company {
+        margin-bottom: 5px;
+    }
     .duration {
         font-weight: 700;
         text-transform: uppercase;
