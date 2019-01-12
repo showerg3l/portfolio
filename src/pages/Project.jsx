@@ -6,6 +6,7 @@ import posed from 'react-pose';
 import SuperTheme from './projects/super-theme';
 import ContentBuilder from './projects/content-builder';
 import SupportTimerApp from './projects/support-timer-app';
+import SelfieDrone from './projects/selfie-drone';
 
 
 const Return = posed.div({
@@ -57,6 +58,8 @@ const Project = (props) => {
         ProjectContent = ContentBuilder;
     } else if (props.project.slug === "support-timer-app") {
         ProjectContent = SupportTimerApp;
+    } else if (props.project.slug === "selfie-drone") {
+        ProjectContent = SelfieDrone;
     }
 
     return (

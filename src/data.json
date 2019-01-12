@@ -44,6 +44,18 @@
             ],
             "launched": "In Alpha",
             "summary": "A simple app, with business integrations"
+        },
+        {
+            "name": "Selfie Drone",
+            "slug": "selfie-drone",
+            "rotate": 90,
+            "featured": true,
+            "tags": [
+                "React",
+                "Node"
+            ],
+            "launched": "In Development",
+            "summary": "A modern day solution for modern day narcissism"
         }
     ]
 }
