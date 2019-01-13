@@ -2,8 +2,8 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 //imgs
-import ss1 from '../../imgs/ss1.jpg';
-import ss2 from '../../imgs/ss2.png';
+import ss1 from '../../imgs/super-theme/ss1.jpg';
+import ss2 from '../../imgs/super-theme/ss2.png';
 
 const SuperTheme = () => {
     return (
