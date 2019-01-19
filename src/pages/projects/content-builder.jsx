@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import LazyLoad from "../../components/lazy-load";
 
 
 import ss1 from '../../imgs/content-builder/ss1.jpg';
@@ -11,7 +12,7 @@ import ss4_2 from '../../imgs/content-builder/ss4-2.jpg';
 const SuperTheme = () => {
     return (
         <React.Fragment>
-            <section class="py-5">
+            <section className="py-5">
                 <h4>
                     Overview
                 </h4>
@@ -25,13 +26,15 @@ const SuperTheme = () => {
                     Moodle uses AMD modules so this project required incorporating each component into the AMD system to allow the files to be integrated succinctly. 
                 </p>
             </section>
-            <section class="py-5">
+            <section className="py-5">
                 <h5>How it works</h5>
                 <p>In a few simple steps we can build up a layout.</p>
                 <h6>Step 1 - Column selector</h6>
                 <p>Each section needs a number of columns, this was the initial list of options I started with but it can be expanded on very easily</p>
                 <figure className="mb-3">
-                    <img src={ss2} alt="settings-page"/>
+                    <LazyLoad height="300">
+                        <img src={ss2} alt="settings-page"/>
+                    </LazyLoad>
                 </figure>
 
                 <h6>Step 2 - Content selection</h6>
