@@ -5,7 +5,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SliderTopSVG from './sliderTopSVG';
 import SliderBottomSVG from './sliderBottomSVG';
 
+import SuperThemeTitle from '../../svgs/super-theme';
+
+
 const Slide = (props) => {
+    let svgMap = {
+        "super-theme": SuperThemeTitle,
+        "content-builder": SuperThemeTitle,
+        "support-timer-app": SuperThemeTitle,
+        "selfie-drone": SuperThemeTitle
+    }
+
+    const Title = svgMap[props.data.slug];
+
     let additionalclasses = 'fadeOut';
     if (props.currentSlide === props.data.i && props.loaded) {
         additionalclasses = 'fadeIn';
@@ -18,7 +30,7 @@ const Slide = (props) => {
             <div className="slide-wrapper">
                 <div className="slide-title">
                     <Link to={"projects/" + props.data.slug} onClick={(e) => props.delayTransition(e, props.data.slug)}>
-                        {props.data.name}
+                        <Title />
                     </Link>
                 </div>
                 <div className={

@@ -1,0 +1,16 @@
+
+.lines {
+    path {
+        stroke: $red;
+        fill: #fcfcfc;
+        stroke-width: 1px;
+        stroke-dashoffset: 200;
+        transition: stroke-dashoffset 0.5s ease, fill 0.5s ease;
+    }
+    &:hover {
+        path {
+            fill: #e8e8e8;
+            stroke-dashoffset: 0;
+        }
+    }
+}
