@@ -1,7 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-
-//import step1 from '../../videos/part-1.mp4';
 
 const SelfieDrone = () => {
     return (

@@ -36,10 +36,6 @@ const Box3 = posed.div({
     exit: { opacity: 0 },
 });
 
-const Wrapper = posed.div({
-    enter: {marginRight: '135px'},
-});
-
 const Project = (props) => {
     let returnURL = "/projects";
     if (props.location.state && props.location.state.from) {
