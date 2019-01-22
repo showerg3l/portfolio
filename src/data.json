@@ -55,7 +55,8 @@
                 "Node"
             ],
             "launched": "In Development",
-            "summary": "A modern day solution for modern day narcissism"
+            "summary": "A modern day solution for modern day narcissism",
+            "githubrepo": "selfie-drone"
         }
     ]
 }
