@@ -11,7 +11,7 @@ const Contact = () => {
                 <div className="content">
                     <h2>How to get in touch</h2>
                     <p>
-                        I'm currently looking for new employment and would I'd love to hear from you.
+                        Thanks for taking a look at my portfolio, if you would like to get it touch just send me a quick email to get the ball rolling.
                     </p>
 
                     <div className="attributes">
