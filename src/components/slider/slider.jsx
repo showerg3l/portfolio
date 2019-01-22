@@ -27,9 +27,9 @@ class Slider extends React.Component {
     }
 
     componentDidMount() {
-        window.addEventListener('wheel', this.handleScroll);
+        window.addEventListener('wheel', this.handleScroll, { passive: true});
         setTimeout(() => this.setState({
-            loaded:true
+            loaded: true
         }), 0)
     }
 
