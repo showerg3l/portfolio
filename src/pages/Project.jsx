@@ -84,7 +84,15 @@ const Project = (props) => {
                                 </Link>
                             </Return>
                             <Box className="project-title">
-                                <h2 className="text-red">{props.project.name}</h2>
+                                <h2 className="text-red">
+                                    {props.project.name} 
+                                    { props.project.githubrepo ? 
+                                        <a style={{marginLeft: '1rem'}} href={"https://github.com/callumbooth/" + props.project.githubrepo} target="_blank">
+                                            <FontAwesomeIcon icon={['fab', 'github']} />
+                                        </a>
+                                        : null
+                                    }
+                                </h2>
                             </Box>
                             <Box2 className="meta">
                                 <div className="tags">
