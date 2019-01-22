@@ -49,8 +49,10 @@ const Sidebar = (props) => {
                     <span className="text-red">
                         e: &nbsp;
                     </span> 
-                    <span className="text-bold"> 
-                        callum-booth@live.co.uk
+                    <span className="text-bold">
+                        <a href="mailto:callumbooth@live.co.uk"> 
+                            callum-booth@live.co.uk
+                        </a>
                     </span>
                 </div>
                 {/*<div className="telephone">
