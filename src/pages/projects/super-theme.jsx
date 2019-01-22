@@ -1,5 +1,6 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import LazyLoad from '../../components/lazy-load';
+
 
 //imgs
 import ss1 from '../../imgs/super-theme/ss1.jpg';
@@ -28,7 +29,9 @@ const SuperTheme = () => {
                     Onne issues with other Moodle themes is the poor UX of the theme settings, Super theme changes this an improved tab layout with ability to have sub pages to settings can be categorised into meaningful sections.
                 </p>
                 <figure className="mb-3">
-                    <img src={ss1} alt="settings-page"/>
+                    <LazyLoad height="450">
+                        <img src={ss1} alt="settings-page"/>
+                    </LazyLoad>
                 </figure>
                 <h5>
                     New setting types
@@ -46,7 +49,9 @@ const SuperTheme = () => {
                     For example, a user might want the button background colour to be the same as the primary colour, without the keyword the user would enter the same colour reference in each setting but with keywords they enter the value for the primary colour but the button background colour use the keyword "primary". If the user then updates the primary colour the button background colour also updates.
                 </p>
                 <figure className="mb-3">
-                    <img src={ss2} alt="new settings"/>
+                    <LazyLoad height="410">
+                        <img src={ss2} alt="new settings"/>
+                    </LazyLoad>
                 </figure>
             </section>
         </React.Fragment>
