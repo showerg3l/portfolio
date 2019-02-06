@@ -7,6 +7,7 @@ import SuperTheme from './projects/super-theme';
 import ContentBuilder from './projects/content-builder';
 import SupportTimerApp from './projects/support-timer-app';
 import SelfieDrone from './projects/selfie-drone';
+import Teaflip from './projects/teaflip';
 
 
 const Return = posed.div({
@@ -47,16 +48,17 @@ const Project = (props) => {
         props.history.push(returnURL);
     }
 
-    let ProjectContent;
-    if (props.project.slug === "super-theme") {
-        ProjectContent = SuperTheme;
-    } else if (props.project.slug === "content-builder") {
-        ProjectContent = ContentBuilder;
-    } else if (props.project.slug === "support-timer-app") {
-        ProjectContent = SupportTimerApp;
-    } else if (props.project.slug === "selfie-drone") {
-        ProjectContent = SelfieDrone;
+    const projects = {
+        "super-theme": SuperTheme,
+        "content-builder": ContentBuilder,
+        "support-timer-app": SupportTimerApp,
+        "selfie-drone": SelfieDrone,
+        "teaflip": Teaflip
     }
+
+    let ProjectContent = projects[props.project.slug];
+
+
 
     return (
         <div id="project" className={"page-"+props.project.slug}>
