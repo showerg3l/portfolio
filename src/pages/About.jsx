@@ -107,7 +107,7 @@ const About = () => {
                   quality products.
                 </p>
                 <p>
-                  After starting with Bluetel Solutions recently, I have jumped
+                  After recently starting with Bluetel Solutions, I have jumped
                   into working with an agile team to help create and refine
                   project tasks, along with implementing new functionality as
                   well as improving and refactoring existing code in the
